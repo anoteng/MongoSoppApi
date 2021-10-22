@@ -6,7 +6,6 @@ module.exports = function(app, db) {
 
     for(let i of collections){
         app.get('/api/' +i, function(req, res) {
-            // console.log(req.headers)
             db.db('sopp').collection(i).find({}).toArray()
                 .then(result => {
                     res.send(JSON.stringify(result))
