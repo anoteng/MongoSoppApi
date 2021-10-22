@@ -52,7 +52,7 @@ module.exports = function(app, db) {
         const data = req.body
         const id = ObjectId(req.params.id);
         console.log(req.body)
-        db.db('sopp').collection('species').updateOne({"_id": id}, {
+        db.db('sopp').collection('species').findOneAndReplace({"_id": id}, {
             genus: data.genus,
             species: data.species,
             norwegian: data.norwegian,
