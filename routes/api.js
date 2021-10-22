@@ -12,4 +12,13 @@ module.exports = function(app, db) {
                 })
         })
     }
+    for(let i of collections){
+        app.get('/api/' + i + ':id', function(req, res) {
+            const id = parseInt(req.params.id);
+            db.db('sopp').collection(i).findOne({"id": id})
+                .then(result => {
+                    res.send(JSON.stringify(result))
+                })
+        })
+    }
 }
