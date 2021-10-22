@@ -1,5 +1,4 @@
 module.exports = function(app, db) {
-    let currentUser = {}
     app.get('/api', function(req, res) {
         res.send('../public/index.html');
     });

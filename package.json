@@ -15,9 +15,9 @@
   "author": "Andreas Noteng",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/anoteng/MongoSopp/issues"
+    "url": "https://github.com/anoteng/MongoSoppApi/issues"
   },
-  "homepage": "https://github.com/anoteng/MongoSopp#readme",
+  "homepage": "https://github.com/anoteng/MongoSoppApi#readme",
   "dependencies": {
     "@okta/jwt-verifier": "^2.3.0",
     "body-parser": "^1.19.0",
@@ -26,7 +26,5 @@
     "express": "^4.17.1",
     "mongodb": "^4.1.3"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.13"
-  }
+  "devDependencies": {}
 }
