@@ -48,4 +48,20 @@ module.exports = function(app, db) {
                 res.send(JSON.stringify(result))
             })
     })
+    app.put('/api/species/:id', function(req, res){
+        const data = req.body
+        const id = ObjectId(req.params.id);
+        console.log(req.body)
+        db.db('sopp').collection('species').updateOne({"_id": id}, {
+            genus: data.genus,
+            species: data.species,
+            norwegian: data.norwegian,
+            english: data.english,
+            description: data.body
+        })
+            .then(result => {
+                console.log(result)
+                res.send(JSON.stringify(result))
+            })
+    })
 }
