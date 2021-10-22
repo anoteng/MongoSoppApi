@@ -11,7 +11,7 @@ const MongoClient = require('mongodb').MongoClient
 // doAsync(fs).readFile('./.env', 'utf8')
 //     .then((data) => console.log(data));
 require('dotenv').config();
-// console.log(process.env.ATLAS_URI)
+console.log(process.env)
 const oktaJwtVerifier = new OktaJwtVerifier({
     clientId: process.env.OKTA_CLIENT,
     issuer: process.env.OKTA_ISSUER
