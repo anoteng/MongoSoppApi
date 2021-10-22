@@ -1,7 +1,7 @@
 steps:
   # Download .env file
   - name: "gcr.io/cloud-builders/gsutil"
-    args: ["cp", "gs://sopp-305401/.prod.env", ".env"]
+    args: ["cp", "gs://sopp-305401/.env", ".env"]
   # build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/${_PROJECT_ID}/mongosopp-api', '.' ]

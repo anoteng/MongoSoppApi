@@ -22,7 +22,7 @@ MongoClient.connect(process.env.ATLAS_URI, (err, client) => {
     console.log('Connected to Database')
     require('routes/api')(app, client)
 })
-app.listen(3000, function() {
+app.listen(8080, function() {
     console.log('listening on 3000')
 })
 app.use(bodyParser.urlencoded({extended: true}))
