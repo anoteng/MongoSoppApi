@@ -16,7 +16,7 @@ module.exports = function(app, db) {
         app.get('/api/' + i + '/:id', function(req, res) {
             const id = parseInt(req.params.id);
             console.log(req.params.id)
-            db.db('sopp').collection(i).findOne({"_id": ObjectId(id)})
+            db.db('sopp').collection(i).findOne(id)
                 .then(result => {
                     res.send(JSON.stringify(result))
                 })
