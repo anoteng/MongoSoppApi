@@ -3,7 +3,7 @@ module.exports = function(app, db) {
         res.send('../public/index.html');
     });
     const collections = ['species', 'genus', 'bilder', 'edible', 'forvekslingsarter', 'quizProgress', 'imageset', 'traits', 'users']
-    const ObjectId = require('mongodb').ObjectID
+    const ObjectId = require('mongodb').ObjectId
     for(let i of collections){
         app.get('/api/' +i, function(req, res) {
             db.db('sopp').collection(i).find({}).toArray()
